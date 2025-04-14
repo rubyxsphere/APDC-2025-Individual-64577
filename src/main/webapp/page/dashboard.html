@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Projeto ADC</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+  <style>
+    .dashboard-container { max-width: none; margin: 0 auto; padding: 20px; }
+    section { margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+    section:last-of-type { border-bottom: none; }
+    section h2 { font-size: 1.5em; color: #0056b3; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px solid #eee; text-align: left; }
+    section h2 i { margin-right: 8px; }
+    section h3 { font-size: 1.2em; color: #333; margin-top: 15px; margin-bottom: 10px; text-align: left;}
+    section ul { list-style: none; padding-left: 0; margin-top: 0; }
+    section li { margin-bottom: 8px; }
+    section li a { text-decoration: none; color: #007bff; }
+    section li a:hover { text-decoration: underline; color: #0056b3; }
+    section li a i { margin-right: 6px; width: 1.2em; text-align: center; }
+    #user-info-header { position: fixed; top: 0; left: 0; background-color: rgba(240, 240, 240, 0.9); padding: 5px 10px; border-bottom-right-radius: 5px; border: 1px solid #ddd; border-top: none; border-left: none; font-size: 0.9em; color: #333; z-index: 100; margin-bottom: 0; text-align: left; }
+    .admin-only, .backoffice-only { display: none; }
+    #worksheet-management-section, #user-management-section { display: none; }
+    #worksheet-management-section li { display: none; }
+
+  </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+  <p id="user-info-header">Loading user info...</p>
+  <a href="../index.html" class="back-link"><i class="fas fa-home"></i> Home</a>
+  <h1>Dashboard</h1>
+
+  <section id="profile-section">
+    <h2><i class="fas fa-user-circle"></i> My Profile</h2>
+    <ul>
+      <li><a href="profile.html"><i class="fas fa-id-card"></i> View My Profile</a></li>
+      <li><a href="edit-profile.html"><i class="fas fa-user-edit"></i> Edit My Profile</a></li>
+      <li><a href="change-password.html"><i class="fas fa-key"></i> Change My Password</a></li>
+    </ul>
+  </section>
+
+  <section id="worksheet-management-section">
+    <h2><i class="fas fa-leaf"></i> Worksheet Management</h2>
+    <ul>
+      <li class="modify-ws"><a href="#"><i class="fas fa-edit"></i> Modify Worksheet (PARTNER / BACKOFFICE)</a></li>
+      <li class="create-list-ws"><a href="#"><i class="fas fa-plus-circle"></i> Create Worksheet (BACKOFFICE only)</a></li>
+      <li class="create-list-ws"><a href="#"><i class="fas fa-list-alt"></i> List/Search Worksheets (BACKOFFICE only)</a></li>
+    </ul>
+  </section>
+
+  <section id="user-management-section">
+    <h2><i class="fas fa-users-cog"></i> User Management</h2>
+    <div class="backoffice-only">
+      <h3>Backoffice Actions</h3>
+      <ul>
+        <li><a href="#"><i class="fas fa-list-ul"></i> List Users (ENDUSERS/PARTNERS)</a></li>
+        <li><a href="#"><i class="fas fa-user-tag"></i> Change User Role (ENDUSER <=> PARTNER)</a></li>
+        <li><a href="#"><i class="fas fa-toggle-on"></i> Change User State (ACTIVATE/DEACTIVATE)</a></li>
+        <li><a href="#"><i class="fas fa-user-pen"></i> Modify User Attributes (ENDUSER/PARTNER)</a></li>
+        <li><a href="#"><i class="fas fa-user-minus"></i> Remove User Account (ENDUSER/PARTNER)</a></li>
+      </ul>
+    </div>
+    <div class="admin-only">
+      <h3>Admin Actions</h3>
+      <ul>
+        <li><a href="list-users.html"><i class="fas fa-list"></i> List ALL Users</a></li>
+        <li><a href="change-role.html"><i class="fas fa-user-graduate"></i> Change Any User Role</a></li>
+        <li><a href="change-state.html"><i class="fas fa-power-off"></i> Change Any User State</a></li>
+        <li><a href="modify-user-attributes.html"><i class="fas fa-address-card"></i> Modify Any User Attributes</a></li>
+        <li><a href="remove-user.html"><i class="fas fa-user-slash"></i> Remove Any User Account</a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<button id="fixed-logout-btn" class="btn logout-button">
+  <i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+<script src="../js/dashboard.js" defer></script>
+<div class="page-footer">
+  <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+
+</body>
+</html>

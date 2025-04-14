@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Change User Role - Projeto ADC</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<p id="user-info-header">Loading user info...</p>
+<a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+<div class="form-wrapper">
+    <h1><i class="fas fa-user-tag"></i> Change User Role</h1>
+    <p>Enter the user's email and select the new role.</p>
+
+    <div id="change-role-loading" style="display: none; text-align: center; margin: 2rem 0;">
+        <p><i class="fas fa-spinner fa-spin"></i> Processing...</p>
+    </div>
+    <div class="message-area">
+        <div class="error-message" id="error-message-cr" style="display: none;"></div>
+        <div class="success-message" id="success-message-cr" style="display: none;"></div>
+    </div>
+
+
+    <form id="change-role-form" class="auth-form">
+        <div class="form-group">
+            <label for="target-email"><i class="fas fa-envelope"></i> Target User Email:</label>
+            <input type="email" id="target-email" name="targetEmail" required placeholder="Enter email address of the user">
+        </div>
+
+        <div class="form-group">
+            <label for="new-role"><i class="fas fa-user-shield"></i> New Role:</label>
+            <select id="new-role" name="newRole" required>
+                <option value="" disabled selected>Select New Role</option>
+                <option value="ENDUSER">ENDUSER</option>
+                <option value="PARTNER">PARTNER</option>
+                <option value="BACKOFFICE">BACKOFFICE (Admin only)</option>
+                <option value="ADMIN">ADMIN (Admin only)</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn"><i class="fas fa-exchange-alt"></i> Change Role</button>
+    </form>
+    <p class="form-link"><a href="dashboard.html">Cancel</a></p>
+</div>
+
+<script src="../js/change-role.js" defer></script>
+<div class="page-footer">
+    <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+<button id="fixed-logout-btn" class="btn logout-button">
+    <i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+</body>
+</html>

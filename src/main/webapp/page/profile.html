@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Projeto ADC</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="profile-page-wrapper">
+  <p id="user-info-header">Loading user info...</p>
+  <a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+  <h1><i class="fas fa-user-circle"></i> My Profile</h1>
+
+  <div id="profile-loading" style="text-align: center; margin: 30px 0; display: block;">
+    <p><i class="fas fa-spinner fa-spin"></i> Loading profile data...</p>
+  </div>
+
+  <div id="profile-error" class="error-message" style="display: none; max-width: 600px; margin: 20px auto;">
+    Error loading profile.
+  </div>
+
+  <div id="profile-content" style="display: none;">
+    <div class="profile-layout">
+      <div class="profile-picture-section">
+        <div id="profile-photo-container">
+          <img id="profile-photo" src="#" alt="Profile Picture" style="display: none;">
+          <div id="no-photo-placeholder" style="display: block;">
+            <i class="fas fa-user-circle placeholder-icon"></i>
+            <span>No photo</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-details-section">
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        <p><strong>Username:</strong> <span id="profile-username"></span></p>
+        <p><strong>Full Name:</strong> <span id="profile-fullName"></span></p>
+        <p><strong>Phone:</strong> <span id="profile-phone"></span></p>
+        <p><strong>Visibility:</strong> <span id="profile-profile"></span></p>
+        <p><strong>Role:</strong> <span id="profile-role"></span></p>
+        <p><strong>Account State:</strong> <span id="profile-state"></span></p>
+        <p><strong>CC Number:</strong> <span id="profile-ccNumber"></span></p>
+        <p><strong>NIF:</strong> <span id="profile-nif"></span></p>
+        <p><strong>Address:</strong> <span id="profile-address"></span></p>
+        <p><strong>Employer:</strong> <span id="profile-employer"></span></p>
+        <p><strong>Job:</strong> <span id="profile-job"></span></p>
+        <p><strong>Employer NIF:</strong> <span id="profile-employerNIF"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../js/profile.js" defer></script>
+<div class="page-footer">
+  <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+
+</body>
+</html>

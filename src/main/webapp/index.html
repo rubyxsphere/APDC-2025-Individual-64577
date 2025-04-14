@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - Projeto ADC</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="index-container">
+    <h1><i class="fas fa-feather-alt"></i> Projeto ADC</h1>
+    <p class="subtitle">The best way to manage users and worksheets.</p>
+
+    <div id="logged-out-options" class="button-options">
+        <div class="button-row"> <a href="/page/login.html" class="btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="/page/register.html" class="btn register-button"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </div>
+
+    <div id="logged-in-options" class="button-options">
+        <div class="button-row"> <a href="/page/dashboard.html" class="btn"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <button id="index-logout-button" class="btn logout-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <p id="index-user-info" style="display: none;"></p>
+    </div>
+
+    <div id="loading-message" style="display: none; margin-top: 1rem;">
+        <p><i class="fas fa-spinner fa-spin"></i> Checking status...</p>
+    </div>
+
+</div>
+
+<script src="js/index.js" defer></script>
+<div class="page-footer">
+    <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+</body>
+</html>

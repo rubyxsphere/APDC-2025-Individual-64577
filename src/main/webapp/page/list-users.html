@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - User List</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<p id="user-info-header">Loading user info...</p>
+<a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+<div class="list-users-wrapper">
+  <h1><i class="fas fa-users"></i> User List (Admin)</h1>
+
+  <div id="list-users-error" class="error-message" style="display: none;"></div>
+  <div id="list-users-loading" style="text-align: center; margin: 30px 0; display: block;">
+    <p><i class="fas fa-spinner fa-spin"></i> Loading users...</p>
+  </div>
+
+  <div id="users-list-container" class="list-users-table-wrapper">
+  </div>
+
+</div>
+
+<script src="../js/list-users.js" defer></script>
+<div class="page-footer">
+  <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+<button id="fixed-logout-btn" class="btn logout-button">
+  <i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+</body>
+</html>

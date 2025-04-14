@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Remove User - Projeto ADC</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="https://kit.fontawesome.com/3ba64fd631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<p id="user-info-header">Loading user info...</p>
+<a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+
+<div class="form-wrapper">
+    <h1><i class="fas fa-user-minus"></i> Remove User Account</h1>
+    <p>Enter the email address of the user you wish to delete from the database.</p>
+
+    <div id="remove-user-loading" style="display: none; text-align: center; margin: 2rem 0;">
+        <p><i class="fas fa-spinner fa-spin"></i> Processing...</p>
+    </div>
+    <div class="message-area">
+        <div class="error-message" id="error-message-ru" style="display: none;"></div>
+        <div class="success-message" id="success-message-ru" style="display: none;"></div>
+    </div>
+
+
+    <form id="remove-user-form" class="auth-form">
+        <div class="form-group">
+            <label for="email-to-remove"><i class="fas fa-envelope"></i> Email of User:</label>
+            <input type="email" id="email-to-remove" name="emailToRemove" required placeholder="Enter email address">
+        </div>
+
+        <button type="submit" class="btn logout-button"><i class="fas fa-trash-alt"></i> Remove User</button>
+    </form>
+    <p class="form-link"><a href="dashboard.html">Cancel</a></p>
+</div>
+
+<script src="../js/remove-user.js" defer></script>
+<div class="page-footer">
+    <i class="fas fa-feather-alt"></i> Projeto ADC
+</div>
+<button id="fixed-logout-btn" class="btn logout-button">
+    <i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+</body>
+</html>
